@@ -113,8 +113,8 @@ class renderer {
      *
      * @return Object
      */
-    public function render_group_element_htmleditor($name, $default = null, $type = PARAM_RAW) {
-        $item = new \admin_setting_confightmleditor('bigbluebuttonbn_' . $name,
+    public function render_group_element_textarea($name, $default = null, $type = PARAM_RAW) {
+        $item = new \admin_setting_configtextarea('bigbluebuttonbn_' . $name,
                 get_string('config_' . $name, 'bigbluebuttonbn'),
                 get_string('config_' . $name . '_description', 'bigbluebuttonbn'),
                 $default, $type);
