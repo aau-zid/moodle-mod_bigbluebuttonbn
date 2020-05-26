@@ -3027,21 +3027,18 @@ function bigbluebuttonbn_settings_muteonstart(&$renderer) {
 }
 
 /**
- * Helper function renders default messages settings if the feature is enabled.
+ * Helper function renders default messages settings.
  *
  * @param object $renderer
  *
  * @return void
  */
 function bigbluebuttonbn_settings_default_messages(&$renderer) {
-    // Configuration for BigBlueButton.
-    if ((boolean) \mod_bigbluebuttonbn\settings\validator::section_default_messages_shown()) {
-        $renderer->render_group_header('default_messages');
-        $renderer->render_group_element(
-            'welcome_default',
-            $renderer->render_group_element_htmleditor('welcome_default', '')
-        );
-    }
+    $renderer->render_group_header('default_messages');
+    $renderer->render_group_element(
+        'welcome_default',
+        $renderer->render_group_element_htmleditor('welcome_default', '')
+    );
 }
 
 /**
